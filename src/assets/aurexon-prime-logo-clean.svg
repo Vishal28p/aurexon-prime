@@ -1,0 +1,11 @@
+<svg width="1600" height="520" viewBox="0 0 1600 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Aurexon Prime logo</title>
+  <desc id="desc">Aurexon Prime logo with green and blue mark, wordmark and tagline.</desc>
+  <path d="M136 98L270 343H50L136 98Z" fill="#1BAF59"/>
+  <path d="M136 194L242 343H50L136 194Z" fill="#149BE8"/>
+  <path d="M136 254L182 318H90L136 254Z" fill="#0B2E59" fill-opacity="0.08"/>
+  <text x="336" y="346" fill="#0F172A" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="174" font-weight="900" font-style="italic" letter-spacing="-8">Aurexon Prime</text>
+  <line x1="72" y1="430" x2="392" y2="430" stroke="#0F172A" stroke-width="6"/>
+  <line x1="1376" y1="430" x2="1518" y2="430" stroke="#0F172A" stroke-width="6"/>
+  <text x="452" y="462" fill="#0F172A" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" letter-spacing="11">EXCELLENCE WITHOUT BORDERS</text>
+</svg>

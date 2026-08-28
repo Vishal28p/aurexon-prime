@@ -19,6 +19,7 @@ import cmcImage from '../assets/products/03_cmc_carboxymethyl_cellulose.png'
 import calciumChlorideImage from '../assets/products/04_calcium_chloride.png'
 import sodiumBenzoateImage from '../assets/products/05_sodium_benzoate.png'
 import potassiumSorbateImage from '../assets/products/06_potassium_sorbate.png'
+import preservationSystemImage from '../assets/products/preservation system.png'
 
 export type ProductItem = {
   name: string
@@ -149,8 +150,7 @@ export const solutionSystems: SolutionItem[] = [
   {
     name: 'Preservation System',
     description: 'Supports microbial control and extended shelf life.',
-    image:
-      'https://images.unsplash.com/photo-1589621316382-008455b857cd?auto=format&fit=crop&w=1200&q=80',
+    image: preservationSystemImage,
     ingredients: ['Potassium Sorbate', 'Sodium Benzoate'],
   },
 ] as const

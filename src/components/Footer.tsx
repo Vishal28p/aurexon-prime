@@ -13,7 +13,7 @@ export function Footer({ logo }: FooterProps) {
         <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr_0.8fr]">
           <div>
             <a href="#home" className="inline-flex items-center">
-              <img src={logo} alt="Aurexon Prime" className="h-auto w-[210px] max-w-full rounded-full object-contain" />
+              <img src={logo} alt="Aurexon Prime" className="h-auto w-[210px] max-w-full object-contain" />
             </a>
             <p className="mt-5 max-w-xl text-sm leading-7 text-white/70">
               Aurexon Prime is a premium B2B ingredient partner focused on hydrocolloids and food solutions that deliver dependable performance, elegant texture and long-term value.

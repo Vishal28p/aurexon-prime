@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { FiArrowRight } from 'react-icons/fi'
-import logo from './assets/products/Aurexon_Prime_Logo_Web.png'
+import logo from './assets/products/Aurexon_Prime_Logo_Web_Clean.png'
 import { AboutSection } from './components/AboutSection'
 import { ContactSection } from './components/ContactSection'
 import { Footer } from './components/Footer'

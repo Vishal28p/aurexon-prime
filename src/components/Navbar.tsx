@@ -28,7 +28,7 @@ export function Navbar({ logo }: NavbarProps) {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <a href="#home" className="flex items-center outline-none focus:ring-2 focus:ring-emerald/60">
-          <img src={logo} alt="Aurexon Prime" className="h-auto w-[220px] max-w-full rounded-full object-contain sm:w-[240px]" />
+          <img src={logo} alt="Aurexon Prime" className="h-auto w-[220px] max-w-full object-contain sm:w-[240px]" />
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary navigation">
