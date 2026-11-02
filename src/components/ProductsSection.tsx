@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { FiArrowRight, FiX } from 'react-icons/fi'
-import { products } from '../data/siteContent'
+import { productCategories, products } from '../data/siteContent'
 import { fadeUp, stagger } from '../lib/motion'
 import { SectionHeading } from './SectionHeading'
 
 export function ProductsSection() {
   const [activeProductName, setActiveProductName] = useState<string | null>(null)
+  const [activeCategory, setActiveCategory] = useState<string>('All Products')
 
   const activeProduct = products.find((product) => product.name === activeProductName) ?? null
+  const visibleProducts = activeCategory === 'All Products' ? products : products.filter((product) => product.category === activeCategory)
 
   useEffect(() => {
     if (!activeProductName) {
@@ -37,14 +39,34 @@ export function ProductsSection() {
           centered
         />
 
+        <div className="mt-10 flex flex-wrap justify-center gap-2" role="tablist" aria-label="Product categories">
+          {['All Products', ...productCategories].map((category) => (
+            <button
+              key={category}
+              type="button"
+              role="tab"
+              aria-selected={activeCategory === category}
+              onClick={() => setActiveCategory(category)}
+              className={`rounded-full border px-4 py-2.5 text-sm font-semibold transition ${
+                activeCategory === category
+                  ? 'border-navy bg-navy text-white shadow-sm'
+                  : 'border-slate-200 bg-white/80 text-slate-600 hover:border-emerald hover:text-emerald'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
         <motion.div
+          key={activeCategory}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.18 }}
           variants={stagger}
           className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3"
         >
-          {products.map((product) => (
+          {visibleProducts.map((product) => (
             <motion.article
               key={product.name}
               variants={fadeUp}
@@ -70,7 +92,7 @@ export function ProductsSection() {
 
                 <div className="flex items-center justify-between gap-4">
                   <div className="text-sm text-slate-500">
-                    {product.availableGrades ? `${product.availableGrades.length} available grade options` : 'Functional ingredient'}
+                    {product.category}
                   </div>
                   <button
                     type="button"
@@ -166,6 +188,17 @@ export function ProductsSection() {
                         <div key={application} className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-medium text-slate-700">
                           {application}
                         </div>
+                      ))}
+                    </div>
+                  </section>
+
+                  <section className="mt-8">
+                    <h4 className="text-sm font-semibold uppercase tracking-[0.26em] text-slate-400">Industries Served</h4>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {activeProduct.industries.map((industry) => (
+                        <span key={industry} className="rounded-full border border-navy/10 bg-navy/5 px-4 py-2 text-sm font-medium text-slate-700">
+                          {industry}
+                        </span>
                       ))}
                     </div>
                   </section>

@@ -13,21 +13,35 @@ import {
 import { FaGlassWater, FaUtensils } from 'react-icons/fa6'
 import { GiBreadSlice, GiCandyCanes, GiPill } from 'react-icons/gi'
 import { LuMilk } from 'react-icons/lu'
-import sodiumAlginateImage from '../assets/products/01_sodium_alginate.png'
-import xanthanGumImage from '../assets/products/02_xanthan_gum (1).png'
-import cmcImage from '../assets/products/03_cmc_carboxymethyl_cellulose.png'
-import calciumChlorideImage from '../assets/products/04_calcium_chloride.png'
-import sodiumBenzoateImage from '../assets/products/05_sodium_benzoate.png'
-import potassiumSorbateImage from '../assets/products/06_potassium_sorbate.png'
 import preservationSystemImage from '../assets/products/preservation system.png'
+import caramelColourImage from '../assets/products/caramel-colour.png'
+import citricAcidImage from '../assets/products/citric-acid.png'
+import ascorbicAcidImage from '../assets/products/ascorbic-acid-vitamin-c.png'
+import sodiumCitrateImage from '../assets/products/sodium-citrate.png'
+import guarGumImage from '../assets/products/guar-gum.png'
+import carrageenanImage from '../assets/products/carrageenan.png'
+import monosodiumGlutamateImage from '../assets/products/monosodium-glutamate-msg.png'
+import disodiumInosinateImage from '../assets/products/disodium-inosinate.png'
+import disodiumGuanylateImage from '../assets/products/disodium-guanylate.png'
+import sucraloseImage from '../assets/products/sucralose.png'
+import steviolGlycosidesImage from '../assets/products/steviol-glycosides.png'
+import carnaubaWaxImage from '../assets/products/carnauba-wax.png'
+import sodiumAlginateImage from '../assets/products/sodium-alginate.png'
+import xanthanGumImage from '../assets/products/xanthan-gum.png'
+import cmcImage from '../assets/products/cmc-carboxymethyl-cellulose.png'
+import calciumChlorideImage from '../assets/products/calcium-chloride.png'
+import sodiumBenzoateImage from '../assets/products/sodium-benzoate.png'
+import potassiumSorbateImage from '../assets/products/potassium-sorbate.png'
 
 export type ProductItem = {
   name: string
+  category: string
   description: string
   image: string
   availableGrades?: string[]
   keyFunctions: string[]
   applications: string[]
+  industries: string[]
 }
 
 export type SolutionItem = {
@@ -59,55 +73,178 @@ export const navLinks = [
   { label: 'Contact', href: '#contact' },
 ] as const
 
+export const productCategories = [
+  'Colors',
+  'Preservatives',
+  'Antioxidants and Acidity Regulators',
+  'Thickeners, Stabilizers and Emulsifiers',
+  'pH Regulators and Anti-caking Agents',
+  'Flavor Enhancers',
+  'Sweeteners, Glazing Agents and Gases',
+] as const
+
 export const products: ProductItem[] = [
   {
-    name: 'Sodium Alginate',
-    description:
-      'Naturally derived hydrocolloid offering excellent thickening, stabilization and gel formation for food and pharmaceutical applications.',
-    image: sodiumAlginateImage,
-    availableGrades: ['Food Grade', 'Pharmaceutical Grade', 'Multiple Viscosity Options'],
-    keyFunctions: ['Thickening', 'Stabilization', 'Gel Formation', 'Encapsulation', 'Texture Enhancement', 'Water Binding'],
-    applications: ['Ice Cream', 'Dairy Products', 'Fruit Preparations', 'Sauces & Dressings', 'Popping Boba', 'Confectionery', 'Pharmaceutical Tablets', 'Controlled Release Systems'],
-  },
-  {
-    name: 'Xanthan Gum',
-    description:
-      'Excellent rheology modifier providing suspension, viscosity stability and texture improvement across wide pH ranges.',
-    image: xanthanGumImage,
-    keyFunctions: ['Thickening', 'Suspension', 'Stabilization', 'Rheology Control', 'Texture Improvement'],
-    applications: ['Sauces', 'Dressings', 'Beverage Systems', 'Dairy Products', 'Syrups', 'Oral Suspensions'],
-  },
-  {
-    name: 'CMC (Carboxymethyl Cellulose)',
-    description:
-      'Multifunctional cellulose derivative improving viscosity, water retention and product consistency.',
-    image: cmcImage,
-    keyFunctions: ['Water Retention', 'Thickening', 'Stabilization', 'Texture Improvement', 'Film Formation'],
-    applications: ['Ice Cream', 'Dairy Products', 'Bakery Fillings', 'Sauces', 'Pharmaceutical Syrups', 'Tablet Formulations'],
-  },
-  {
-    name: 'Calcium Chloride',
-    description:
-      'Reliable calcium source supporting gel activation, firmness and process efficiency.',
-    image: calciumChlorideImage,
-    keyFunctions: ['Gel Activation', 'Firming', 'Calcium Enrichment', 'Process Control'],
-    applications: ['Popping Boba', 'Fruit Processing', 'Vegetable Processing', 'Dairy Applications', 'Beverage Fortification'],
-  },
-  {
-    name: 'Potassium Sorbate',
-    description:
-      'Effective preservative helping control yeast and mold while extending shelf life.',
-    image: potassiumSorbateImage,
-    keyFunctions: ['Preservation', 'Shelf Life Extension', 'Yeast & Mold Control', 'Product Protection'],
-    applications: ['Beverages', 'Sauces', 'Dairy Products', 'Bakery Products', 'Confectionery', 'Pharmaceutical Preparations'],
+    name: 'Caramel Colour',
+    category: 'Colors',
+    description: 'A versatile liquid or powdered colouring ingredient used to create warm brown tones and visual consistency in formulated products.',
+    image: caramelColourImage,
+    keyFunctions: ['Brown Colour Development', 'Shade Consistency', 'Visual Standardization', 'Water Dispersibility'],
+    applications: ['Beverages', 'Sauces and Condiments', 'Bakery Products', 'Confectionery', 'Dairy Preparations'],
+    industries: ['Food and Beverage', 'Dairy', 'Bakery', 'Confectionery'],
   },
   {
     name: 'Sodium Benzoate',
-    description:
-      'An effective preservative that helps control yeast, mold and certain bacteria, extending shelf life and maintaining product quality, particularly in acidic food, beverage and pharmaceutical formulations.',
+    category: 'Preservatives',
+    description: 'A widely used preservative for formulated foods and beverages, supporting product stability and shelf-life management in suitable acidic systems.',
     image: sodiumBenzoateImage,
-    keyFunctions: ['Preservation', 'Antimicrobial Protection', 'Shelf Life Extension', 'Microbial Control', 'Product Stability'],
-    applications: ['Carbonated Soft Drinks', 'Fruit Juices', 'Sauces & Ketchup', 'Jams & Fruit Preparations', 'Pickles & Condiments', 'Pharmaceutical Syrups', 'Oral Liquid Formulations'],
+    keyFunctions: ['Preservation Support', 'Product Stability', 'Shelf-Life Management', 'Formulation Compatibility'],
+    applications: ['Beverages', 'Fruit Preparations', 'Sauces and Condiments', 'Pickles', 'Pharmaceutical Liquids'],
+    industries: ['Food and Beverage', 'Pharmaceutical', 'Ingredient Distribution'],
+  },
+  {
+    name: 'Potassium Sorbate',
+    category: 'Preservatives',
+    description: 'A preservative used to help protect suitable food, beverage and formulated products from yeast and mould growth during storage.',
+    image: potassiumSorbateImage,
+    keyFunctions: ['Preservation Support', 'Yeast Control', 'Mould Control', 'Shelf-Life Management'],
+    applications: ['Beverages', 'Bakery Products', 'Dairy Preparations', 'Sauces', 'Fruit Preparations', 'Confectionery'],
+    industries: ['Food and Beverage', 'Dairy', 'Bakery', 'Confectionery'],
+  },
+  {
+    name: 'Citric Acid',
+    category: 'Antioxidants and Acidity Regulators',
+    description: 'A food acidulant used to provide tartness, adjust acidity and support flavour balance across a broad range of formulations.',
+    image: citricAcidImage,
+    keyFunctions: ['Acidity Adjustment', 'Tartness', 'Flavour Balance', 'Chelation Support'],
+    applications: ['Beverages', 'Confectionery', 'Jams and Preserves', 'Sauces', 'Seasonings', 'Processed Foods'],
+    industries: ['Food and Beverage', 'Confectionery', 'Processed Food'],
+  },
+  {
+    name: 'Ascorbic Acid / Vitamin C',
+    category: 'Antioxidants and Acidity Regulators',
+    description: 'An antioxidant and nutritional ingredient used in food and beverage formulations where oxidation management or vitamin C fortification is required.',
+    image: ascorbicAcidImage,
+    keyFunctions: ['Oxidation Management', 'Vitamin Fortification', 'Acidity Adjustment', 'Nutritional Support'],
+    applications: ['Fruit Beverages', 'Nutritional Drinks', 'Bakery Products', 'Processed Fruit', 'Dietary Supplements'],
+    industries: ['Food and Beverage', 'Nutraceutical', 'Bakery', 'Dietary Supplements'],
+  },
+  {
+    name: 'Sodium Citrate',
+    category: 'Antioxidants and Acidity Regulators',
+    description: 'A buffering and acidity-regulating ingredient used to support pH control, flavour balance and processing performance in formulated foods.',
+    image: sodiumCitrateImage,
+    keyFunctions: ['Buffering', 'Acidity Regulation', 'Flavour Balance', 'Processing Support'],
+    applications: ['Beverages', 'Processed Cheese', 'Dairy Products', 'Jams', 'Confectionery', 'Prepared Foods'],
+    industries: ['Food and Beverage', 'Dairy', 'Confectionery', 'Processed Food'],
+  },
+  {
+    name: 'Sodium Alginate',
+    category: 'Thickeners, Stabilizers and Emulsifiers',
+    description: 'A seaweed-derived hydrocolloid that provides thickening, stabilization and gel formation for controlled texture and processing performance.',
+    image: sodiumAlginateImage,
+    keyFunctions: ['Thickening', 'Stabilization', 'Gel Formation', 'Encapsulation', 'Water Binding'],
+    applications: ['Ice Cream', 'Dairy Products', 'Fruit Preparations', 'Sauces', 'Confectionery', 'Popping Boba'],
+    industries: ['Food and Beverage', 'Dairy', 'Confectionery', 'Ingredient Distribution'],
+  },
+  {
+    name: 'Xanthan Gum',
+    category: 'Thickeners, Stabilizers and Emulsifiers',
+    description: 'A high-performance hydrocolloid used to build viscosity, suspend particles and improve texture across varied food and beverage systems.',
+    image: xanthanGumImage,
+    keyFunctions: ['Thickening', 'Suspension', 'Stabilization', 'Rheology Control', 'Texture Improvement'],
+    applications: ['Sauces', 'Dressings', 'Beverages', 'Dairy Products', 'Bakery Products', 'Pharmaceutical Liquids'],
+    industries: ['Food and Beverage', 'Dairy', 'Bakery', 'Pharmaceutical'],
+  },
+  {
+    name: 'CMC (Carboxymethyl Cellulose)',
+    category: 'Thickeners, Stabilizers and Emulsifiers',
+    description: 'A cellulose-based functional ingredient that supports viscosity, water retention, suspension and consistent texture in formulated products.',
+    image: cmcImage,
+    keyFunctions: ['Water Retention', 'Thickening', 'Stabilization', 'Texture Improvement', 'Film Formation'],
+    applications: ['Ice Cream', 'Dairy Products', 'Bakery Fillings', 'Sauces', 'Beverages', 'Pharmaceutical Liquids'],
+    industries: ['Food and Beverage', 'Dairy', 'Bakery', 'Pharmaceutical'],
+  },
+  {
+    name: 'Guar Gum',
+    category: 'Thickeners, Stabilizers and Emulsifiers',
+    description: 'A plant-derived hydrocolloid used to increase viscosity, improve water management and support texture in food formulations.',
+    image: guarGumImage,
+    keyFunctions: ['Viscosity Building', 'Water Binding', 'Stabilization', 'Texture Control'],
+    applications: ['Sauces', 'Dressings', 'Ice Cream', 'Bakery Products', 'Beverages', 'Dairy Products'],
+    industries: ['Food and Beverage', 'Dairy', 'Bakery', 'Ingredient Distribution'],
+  },
+  {
+    name: 'Carrageenan',
+    category: 'Thickeners, Stabilizers and Emulsifiers',
+    description: 'A seaweed-derived hydrocolloid used for gel formation, suspension and texture development in dairy and other food applications.',
+    image: carrageenanImage,
+    keyFunctions: ['Gel Formation', 'Suspension', 'Stabilization', 'Texture Development'],
+    applications: ['Dairy Products', 'Plant-Based Beverages', 'Desserts', 'Processed Meat', 'Sauces'],
+    industries: ['Food and Beverage', 'Dairy', 'Plant-Based Food', 'Processed Food'],
+  },
+  {
+    name: 'Calcium Chloride',
+    category: 'pH Regulators and Anti-caking Agents',
+    description: 'A soluble calcium salt used for firmness control, gel activation and processing support in selected food and industrial formulations.',
+    image: calciumChlorideImage,
+    keyFunctions: ['Firmness Control', 'Gel Activation', 'Calcium Enrichment', 'Process Control'],
+    applications: ['Fruit Processing', 'Vegetable Processing', 'Cheese Making', 'Beverages', 'Popping Boba'],
+    industries: ['Food and Beverage', 'Dairy', 'Processed Food'],
+  },
+  {
+    name: 'Monosodium Glutamate (MSG)',
+    category: 'Flavor Enhancers',
+    description: 'A flavour-enhancing ingredient used to round out savoury profiles and contribute umami character in prepared food systems.',
+    image: monosodiumGlutamateImage,
+    keyFunctions: ['Umami Enhancement', 'Flavour Rounding', 'Taste Balance', 'Seasoning Efficiency'],
+    applications: ['Seasoning Blends', 'Soups', 'Snacks', 'Sauces', 'Prepared Foods', 'Instant Meals'],
+    industries: ['Food Manufacturing', 'Snacks', 'Seasonings', 'Prepared Foods'],
+  },
+  {
+    name: 'Disodium Inosinate',
+    category: 'Flavor Enhancers',
+    description: 'A savoury taste enhancer used in combination with other seasoning ingredients to build depth and complexity in food formulations.',
+    image: disodiumInosinateImage,
+    keyFunctions: ['Savoury Enhancement', 'Taste Complexity', 'Flavour Rounding', 'Seasoning Support'],
+    applications: ['Seasoning Blends', 'Snacks', 'Soups', 'Sauces', 'Instant Foods'],
+    industries: ['Food Manufacturing', 'Snacks', 'Seasonings', 'Prepared Foods'],
+  },
+  {
+    name: 'Disodium Guanylate',
+    category: 'Flavor Enhancers',
+    description: 'A flavour enhancer used in savoury formulations to support a fuller taste profile and complement seasoning systems.',
+    image: disodiumGuanylateImage,
+    keyFunctions: ['Savoury Enhancement', 'Taste Depth', 'Flavour Rounding', 'Seasoning Support'],
+    applications: ['Seasoning Blends', 'Snacks', 'Soups', 'Sauces', 'Prepared Foods'],
+    industries: ['Food Manufacturing', 'Snacks', 'Seasonings', 'Prepared Foods'],
+  },
+  {
+    name: 'Sucralose',
+    category: 'Sweeteners, Glazing Agents and Gases',
+    description: 'A high-intensity sweetening ingredient used to provide sweetness in a range of reduced-sugar food and beverage formulations.',
+    image: sucraloseImage,
+    keyFunctions: ['Sweetness', 'Sugar Reduction Support', 'Flavour Consistency', 'Formulation Flexibility'],
+    applications: ['Beverages', 'Dairy Products', 'Confectionery', 'Bakery Products', 'Tabletop Sweeteners'],
+    industries: ['Food and Beverage', 'Dairy', 'Confectionery', 'Nutraceutical'],
+  },
+  {
+    name: 'Steviol Glycosides',
+    category: 'Sweeteners, Glazing Agents and Gases',
+    description: 'Plant-derived sweetening ingredients used to develop sweetness in reduced-sugar beverages, foods and nutrition products.',
+    image: steviolGlycosidesImage,
+    keyFunctions: ['Sweetness', 'Plant-Derived Formulation', 'Sugar Reduction Support', 'Taste Balancing'],
+    applications: ['Beverages', 'Dairy Products', 'Confectionery', 'Nutrition Products', 'Tabletop Sweeteners'],
+    industries: ['Food and Beverage', 'Dairy', 'Confectionery', 'Nutraceutical'],
+  },
+  {
+    name: 'Carnauba Wax',
+    category: 'Sweeteners, Glazing Agents and Gases',
+    description: 'A plant-derived glazing agent used to provide surface shine, protection and handling performance to suitable food products.',
+    image: carnaubaWaxImage,
+    keyFunctions: ['Surface Glazing', 'Shine Development', 'Surface Protection', 'Handling Support'],
+    applications: ['Confectionery', 'Fruit Coatings', 'Tablets', 'Nutritional Products', 'Food Decorations'],
+    industries: ['Food and Beverage', 'Confectionery', 'Pharmaceutical', 'Nutraceutical'],
   },
 ] as const
 
